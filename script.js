@@ -77,6 +77,7 @@ const inputTransferAmount = document.querySelector('.form__input--amount');
 const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
+const hideThing = document.querySelector('.hideIt');
 
 /////////////////////////////////////////////////
 // Functions
@@ -220,7 +221,7 @@ let currentAccount, timer;
 btnLogin.addEventListener('click', function (e) {
   // Prevent form from submitting
   e.preventDefault();
-
+  hideThing.classList.add('hide');
   currentAccount = accounts.find(
     acc => acc.username === inputLoginUsername.value
   );
